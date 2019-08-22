@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+  <div id="dic">
+      名前:<input v-model="name">
+      受講コース:<input v-model="cource">
+      受講期:<input v-model="cource_period">
+      <br>
+      <button v-on:click="addStudent">入力した生徒を追加する</button>
+    <ul>
+      <li v-for="student in students" v-bind:key="student.id">
+        ID {{student.id}} /
+        名前 {{student.name}} /
+        コース {{student.cource}} /
+        受講期 {{student.acceptance_period}}
+      </li>
+    </ul>
+  </div>
+
+      <script src="index.js"></script>
+  </body>
+</html>
